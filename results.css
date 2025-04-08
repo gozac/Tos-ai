@@ -1,0 +1,89 @@
+body {
+  min-width: 600px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.container {
+  padding: 20px;
+}
+
+#header {
+  position: relative;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
+
+#back-button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #f1f1f1;
+  color: #333;
+  padding: 6px 12px;
+  margin: 0;
+}
+
+#back-button:hover {
+  background-color: #e0e0e0;
+}
+
+.site-info {
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+#results-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  max-height: none;
+  overflow: auto;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+#copy-button {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+#save-button {
+  background-color: #4CAF50;
+}
+
+/* Style pour l'historique */
+.history-entry {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.history-entry .url {
+  font-weight: bold;
+  color: #1a73e8;
+}
+
+.history-entry .date {
+  color: #666;
+  font-size: 12px;
+}
+
+.history-actions button {
+  padding: 4px 8px;
+  margin: 0 2px;
+  font-size: 12px;
+} 

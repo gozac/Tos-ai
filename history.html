@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Historique des Analyses</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+  <link rel="stylesheet" href="results.css">
+  <style>
+    .history-list {
+      max-height: 600px;
+      overflow-y: auto;
+    }
+    
+    .no-history {
+      text-align: center;
+      color: #666;
+      padding: 40px 0;
+    }
+    
+    .history-entry {
+      padding: 15px;
+      margin-bottom: 10px;
+      background-color: #f9f9f9;
+      border-radius: 4px;
+      border-left: 4px solid #1a73e8;
+    }
+    
+    .history-entry:hover {
+      background-color: #f0f0f0;
+    }
+    
+    .history-entry .site {
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+    
+    .history-entry .date {
+      color: #666;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+    
+    .history-entry .preview {
+      color: #333;
+      font-size: 14px;
+      margin: 10px 0;
+      font-style: italic;
+    }
+    
+    .history-actions {
+      margin-top: 10px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+    
+    .clear-all-btn {
+      margin-top: 20px;
+      background-color: #ff5252;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="header">
+      <button id="back-button">← Retour</button>
+      <h1>Historique des Analyses</h1>
+    </div>
+    
+    <div id="history-container">
+      <div class="history-list" id="history-list">
+        <!-- Les entrées d'historique seront insérées ici -->
+      </div>
+      
+      <div class="actions">
+        <button id="clear-all-btn" class="clear-all-btn">Effacer tout l'historique</button>
+      </div>
+    </div>
+    
+    <p class="footer">Cette liste contient toutes les analyses de conditions générales sauvegardées.</p>
+  </div>
+  
+  <script src="history.js"></script>
+</body>
+</html> 
