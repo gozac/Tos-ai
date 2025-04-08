@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TL;DR - Analyseur de Conditions Générales</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>TL;DR - Analyseur de Conditions Générales</h1>
+    
+    <div class="action-bar">
+      <button id="history-button" title="Voir l'historique des analyses">
+        <span class="icon">📚</span> Historique
+      </button>
+    </div>
+    
+    <div id="api-key-section">
+      <h2>Clés API</h2>
+      <div class="tabs">
+        <div class="tab-header">
+          <div class="tab active" data-tab="openai">OpenAI</div>
+          <div class="tab" data-tab="deepseek">Deepseek</div>
+        </div>
+        <div class="tab-content">
+          <div class="tab-pane active" id="openai-tab">
+            <p>Entrez votre clé API OpenAI :</p>
+            <input type="password" id="openai-api-key" placeholder="sk-...">
+            <button id="save-openai-key">Sauvegarder</button>
+            <p id="openai-key-status" class="status"></p>
+          </div>
+          <div class="tab-pane" id="deepseek-tab">
+            <p>Entrez votre clé API Deepseek :</p>
+            <input type="password" id="deepseek-api-key" placeholder="sk-...">
+            <button id="save-deepseek-key">Sauvegarder</button>
+            <p id="deepseek-key-status" class="status"></p>
+          </div>
+        </div>
+      </div>
+      <div class="api-model-select">
+        <p>Sélectionnez le service à utiliser :</p>
+        <select id="api-service-select">
+          <option value="openai">OpenAI (GPT-3.5 Turbo)</option>
+          <option value="deepseek">Deepseek</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="analysis-section">
+      <h2>Analyse des Conditions Générales</h2>
+      <p>Vous pouvez coller le texte des conditions générales ci-dessous ou utiliser le bouton d'extraction automatique pour essayer de les détecter sur la page actuelle :</p>
+      
+      <div class="button-group">
+        <button id="extract-button">Extraire automatiquement</button>
+        <button id="analyze-button">Analyser</button>
+      </div>
+      
+      <textarea id="terms-text" rows="10" placeholder="Copiez-collez les conditions générales ici..."></textarea>
+      
+      <div id="loading" class="hidden">
+        <p>Analyse en cours...</p>
+        <div class="spinner"></div>
+      </div>
+      
+      <div id="results-container" class="hidden">
+        <h2>Résumé des Conditions Générales</h2>
+        <div id="results"></div>
+      </div>
+    </div>
+    
+    <p class="footer">Cette extension utilise l'API OpenAI ou Deepseek pour analyser les conditions générales. Votre clé API est stockée localement dans votre navigateur.</p>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html> 
